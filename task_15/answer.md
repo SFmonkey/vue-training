@@ -1,0 +1,33 @@
+## 问题
+
+谈谈你对 vuex 使用及其理解？
+
+## 结论
+
+> vux 是一个专为 vuejs 应用程序开发的状态管理模式
+
+-   vuex 的核心概念
+
+    1. state
+
+        > vuex 使用单一状态树，用一个对象就包含了全部应用层级状态，至此它便作为唯一数据源存在。这就意味着，每个应用将仅仅包含一个 store 实例。
+
+    2. getter
+
+        > vuex 允许我们在 store 中定义 getter，我们可以将之认为是 store 的计算属性，getter 的返回值会缓存起来，当依赖发生改变时才会改变。
+
+    3. mutation
+
+        > 更改 vuex 的 store 中的状态的唯一方法就是提交 mutation。
+
+    4. action
+
+        > action 类似于 mutation，不同在于 action 提交的是 mutation，而不是直接更改状态，action 可以包含任意异步操作。
+
+    5. module
+
+        > 由于使用单一状态树，应用的所有状态会集中在一个比较大的对象里。当应用变得非常复杂时，store 对象就可能变得相当臃肿。vuex 允许我们将 store 分割成 module，每个模块都可以拥有自己的 state， getter，mutation，action，module。
+
+-   vuex 的使用场景
+
+    vuex 一般用于中大型单页面应用中进行应用状态的管理，对于一些组件间关系较为简单的小型应用，使用 vuex 的必要性不是很大，vuex 更多地用于解决跨组件通信以及作为数据中心集中式的处理数据。这样将数据单独分离出来的管理，可以让我们更加专注地去处理视图层。
